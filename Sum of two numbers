@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+
+{
+	
+https://github.com/asad78698/Sum_of_two_numbers
+int a, b, sum;
+
+
+cout<<"Enter Two Number "<<endl;
+
+cin>>a;
+
+cin>>b;
+
+sum=a*b;
+
+cout<<"The Sum Your Numbers is =  "<<sum<<endl;
+
+
+
+return 0;
+	
+}
