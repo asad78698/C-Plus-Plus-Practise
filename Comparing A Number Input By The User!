@@ -1,0 +1,55 @@
+
+//Name: Muhammad Asad Saleem
+//Reg Id: 36571
+//Program: BS(CS)
+//Comparing a Number
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+
+int n;
+
+cout<<"Enter A Number "<<endl;
+
+cin>>n;
+
+if (n>10 && n<=20)
+
+{
+	
+	cout<<"-----------------------------------\nThe Input Number Is Greater Than 10 "<<endl;
+	
+}
+
+else if (n>20 && n<=30)
+
+{
+
+	cout<<"-----------------------------------\nThe Input Number Is Greater Than 20 "<<endl;
+	
+}
+
+else if (n>30)
+
+{	
+	
+	cout<<"-----------------------------------\nThe Input Number Is Greater Than 30 "<<endl;
+	
+}
+
+else 
+
+{
+	
+	cout<<"--------------------------------\nThe Input Number Is Less Than 10 "<<endl;
+	
+}
+
+
+return 0;
+
+	
+}
