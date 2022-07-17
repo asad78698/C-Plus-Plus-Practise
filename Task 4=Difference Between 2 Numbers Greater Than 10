@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+
+int n, n_2, diff;
+
+cout<<"Enter Any Two Numbers "<<endl;
+
+cin>>n>>n_2;
+
+diff= n-n_2;
+
+if (diff>=10)
+
+{
+	cout<<"The Difference Of Two Input Numbers Is Greater Than 10 "<<endl;
+
+}
+
+
+else 
+
+{
+	cout<<"The Difference of Two Input Numbers Is Less Than 10 "<<endl;
+}
+
+
+
+return 0;
+
+}
+
+
+
+
