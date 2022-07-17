@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+
+int n, n_2, n_3;
+
+cout<<"Enter First Number "<<endl;
+
+cin>>n;
+
+cout<<"Enter Second Number "<<endl;
+
+cin>>n_2;
+
+cout<<"Enter Third Number "<<endl;
+
+cin>>n_3;
+
+if (n<n_2 && n<n_3)
+
+{
+	cout<<"This Number Is Smallest = "<<n<<endl;
+	
+}
+
+
+else if (n_2<n && n_2<n_3)
+
+{
+	cout<<"This Number Is Smallest = "<<n_2<<endl;
+	
+}
+
+else {
+	
+	cout<<"This Number Is Smallest "<<n_3<<endl;
+	
+}
+
+
+
+return 0;
+
+}
