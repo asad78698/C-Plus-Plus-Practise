@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	
+	int n=10, n_2=5;
+	
+	cout<<"Arthmatic Operations \n"<<endl;
+	
+	cout<<n<<"+"<<n_2<<" = "<<n+n_2<<endl;
+	cout<<n<<"-"<<n_2<<" = "<<n-n_2<<endl;
+	cout<<n<<"*"<<n_2<<" = "<<n*n_2<<endl;
+	cout<<n<<"/"<<n_2<<" = "<<n/n_2<<endl;
+	
+	return 0;
+	
+	
+	
+}
+	
+
