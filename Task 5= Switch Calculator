@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+
+char opera;
+
+int n, n_2, result;
+
+cout<<"Enter The Sign +,-,*,/,% "<<endl;
+
+cin>>opera;
+
+cout<<"Enter The Numbers "<<endl;
+
+cin>>n>>n_2;
+
+switch (opera)
+
+{
+	case '+':
+	 result=n+n_2;
+	 cout<<result<<endl;
+	 break;
+
+     case '-':
+     	result=n-n_2;
+		cout<<result<<endl;
+		break;
+		
+	case '*':
+     	result=n*n_2;
+		cout<<result<<endl;
+		break;
+		
+	case '/':
+     	result=n/n_2;
+		cout<<result<<endl;
+		break;
+	
+	case '%':
+     	result=n_2%n;
+		cout<<result<<endl;
+		break;
+		
+	default :
+		cout<<"Invalid "<<endl;
+		
+	 
+}
+
+
+
+
+}
+
