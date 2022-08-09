@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int exocode()
+{
+int number, f=1;
+cout<<"Enter Number "<<endl;
+cin>>number;
+for (int i=1; i<=number; i++)
+
+{
+	f=f*i;
+	
+}
+
+
+return f;
+
+}
+
+main ()
+{
+	int factorial=exocode();
+	cout<<factorial<<endl;
+	
+}
