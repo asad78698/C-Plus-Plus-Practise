@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+exocode( float n, float n2, float s)
+{
+
+s=n/n2;
+
+cout<<s<<endl;
+
+
+}
+
+main ()
+{
+
+float number, number2, sum;
+
+cout<<"Enter The Devision "<<endl;
+cin>>number;
+
+cout<<"Enter The Devisior "<<endl;
+cin>>number2;
+
+exocode(number, number2, sum);
+
+}
