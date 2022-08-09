@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+float exocode()
+{
+float n, n2, sum;
+
+cout<<"Enter The Devision "<<endl;
+cin>>n;
+
+cout<<"Enter The Devisior "<<endl;
+cin>>n2;
+
+sum=n/n2;
+
+return sum;
+}
+
+main ()
+{
+
+float nsum=exocode();
+
+cout<<nsum;
+}
