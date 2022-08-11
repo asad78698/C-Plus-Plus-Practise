@@ -1,0 +1,155 @@
+#include<iostream>
+
+using namespace std;
+
+struct currency {
+	
+	float result, kuwaiti_dinar= 780.78, dollar=250, ausdollar=167.33;
+	float cand_dollar=186.94, dirham=65, inr=3.03, bdt=2.52, lira=13.25, euro=246, riyal=62.5;
+	
+};
+
+void currency ()
+	
+{
+	
+	char ch;
+	float pkr;
+
+	cout<<"Convert Your PKR into 10 Differet Currencies "<<endl;
+	cout<<"----------------------------------------------------------------------"<<endl;
+	
+	cout<<"Enter The Amount In PKR "<<endl;
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cin>>pkr;
+	
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"Enter The Chracter Of Currency In Which You Want To Convert Your PKR"<<endl;
+	cout<<"----------------------------------------------------------------------"<<endl;
+	
+    cout<<"\nAustrilian Dolalr = A \nCandian Dollar = C \nKuwait Dinar = K \nDollar = D \nDirham = U \nTakka = T \nINR = I \nLira = L \nEuro = E \nRiyal = R "<<endl;
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cin>>ch;
+
+
+struct currency aus;
+aus.result=pkr/aus.ausdollar;
+
+struct currency can;
+can.result=pkr/can.cand_dollar;
+
+struct currency kd;
+kd.result=pkr/kd.kuwaiti_dinar;
+
+struct currency dollar;
+dollar.result=pkr/dollar.dollar;
+
+struct currency dirham;
+dirham.result=pkr/dirham.dirham;
+
+struct currency takka;
+takka.result=pkr/takka.bdt;
+
+struct currency in;
+in.result=pkr/in.inr;
+
+struct currency lira;
+lira.result=pkr/lira.lira;
+
+struct currency euro;
+euro.result=pkr/euro.euro;
+
+struct currency riyal;
+riyal.result=pkr/riyal.riyal;
+
+switch (ch)
+
+{
+case 'A':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Australian Dollar According To Your PKR Will Be = "<<aus.result<<endl;
+	break;
+		
+case 'C':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Candian Dollar According To Your PKR Will Be = "<<can.result<<endl;
+	break;
+
+case 'K':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Kuwaiti Dinar According To Your PKR Will Be = "<<kd.result<<endl;
+	break;
+
+case 'D':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Dollars According To Your PKR Will Be = "<<dollar.result<<endl;
+	break;
+	
+case 'U':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Dirhams According To Your PKR Will Be = "<<dirham.result<<endl;
+	break;
+
+case 'T':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Takkas According To Your PKR Will Be = "<<takka.result<<endl;
+	break;
+	
+case 'I':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Inidna Ruppess According To Your PKR Will Be = "<<in.result<<endl;
+	break;
+	
+case 'L':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Liras According To Your PKR Will Be = "<<lira.result<<endl;
+	break;
+
+	
+case 'E':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Euros According To Your PKR Will Be = "<<euro.result<<endl;
+	break;
+	
+		
+case 'R':
+	cout<<"----------------------------------------------------------------------"<<endl;
+	cout<<"The Total Riyals According To Your PKR Will Be = "<<riyal.result<<endl;
+	break;
+
+		
+}
+
+}
+
+int main ()
+{
+	currency();
+	int b;
+	
+cout<<"Do You Want To Use Again Yes = 1: No = 2"<<endl;
+cin>>b;
+
+	
+if (b==1)
+
+{
+	while (b!=2)
+	
+	{
+		currency();
+cout<<"----------------------------------------------------------------------"<<endl;
+cout<<"Do You Want To Use Again Yes = 1: No = 2"<<endl;
+cin>>b;
+cout<<"----------------------------------------------------------------------"<<endl;
+		
+	}
+	
+	}
+	
+    cout<<"--------------------------------"<<endl;
+	cout<<"Thank You For Using "<<endl;		
+	exit(0);
+	return 0;
+}
+	
