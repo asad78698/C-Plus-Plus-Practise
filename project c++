@@ -1,18 +1,163 @@
 #include<iostream>
-
 using namespace std;
-
 struct currency {
-	
 	float result, kuwaiti_dinar= 780.78, dollar=250, ausdollar=167.33;
 	float cand_dollar=186.94, dirham=65, inr=3.03, bdt=2.52, lira=13.25, euro=246, riyal=62.5;
+
+};
+
+struct crypto {
+float ans, matic=220, btc=5368195, eth=437594.32, shibba=0.01, dogge=16, ripple=83.19, tron=83.19, kuc=2351.77, bnb=71643.50, lite=14038.63;
+
+
+};
+
+struct gold {
+		
+float output, gold_24=12260, gold_22=11238;
 	
 };
 
-void currency ()
+void gold () // for gold rates
+
+{
+	int choice, gold1;
+	
+	cout<<"\t Welcome To Gold Exchange "<<endl;
+	cout<<"-------------------------------------------"<<endl;
+	
+	cout<<"Choose Your Desired Option"<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<" * 24K Gold = 1 \n * 22k Gold = 2 "<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cin>>choice;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<"Enter The Total Grams Of Gold "<<endl;
+	cin>>gold1;
+	cout<<"-----------------------------------------------"<<endl;
+	
+	struct gold k24_gold;
+	k24_gold.output= k24_gold.gold_24*gold1;
+	
+	struct gold k22_gold;
+	k22_gold.output= k22_gold.gold_22*gold1;
+	
+	switch (choice)
+	{
+	case 1:
+	cout<<"The "<<gold1<<" grams of 24 Karat Gold will be around = "<<k24_gold.output<<" PKR"<<endl;
+	break;
+		
+	case 2:
+	cout<<"The "<<gold1<<" grams of 22 Karat Gold will be around = "<<k22_gold.output<<" PKR"<<endl;
+	break;
+	
+	}
+
+}
+
+void crypto() // To Calculate The Cryptos
+{
+	int pkr;
+	char ch;
+	
+	cout<<"Welcome To The Crypto Exchange "<<endl;
+	cout<<"-------------------------------------------"<<endl;
+	
+	cout<<"Enter Rupees In PKR "<<endl;
+	cout<<"------------------------------------------"<<endl;
+	cin>>pkr;
+	
+	cout<<"Choose Your Desired Crypto Currency For Conversion "<<endl;
+	cout<<"-----------------------------------------------------"<<endl;
+	cout<<" * Matic = M \n * BTC = B \n * ETH = E \n * Shiba = S \n * Dogge = D \n * Ripple = R \n * Tron = T \n * KUC = K  \n * BNB = B \n * Lite = L "<<endl;
+	cout<<"-------------------------------------------"<<endl;
+	cin>>ch;
+	
+	struct crypto matic;
+	matic.ans=pkr/matic.matic;
+		
+	struct crypto btc;
+	btc.ans=pkr/btc.btc;
+	
+	struct crypto eth;
+	eth.ans=pkr/eth.eth;
+	
+	struct crypto shibba;
+	shibba.ans=pkr/shibba.shibba;
+	
+	struct crypto dogge;
+	dogge.ans=pkr/dogge.dogge;
+	
+	struct crypto ripple;
+	ripple.ans=pkr/ripple.ripple;
+	
+	struct crypto tron;
+	tron.ans=pkr/tron.tron;
+	
+	struct crypto kuc;
+	kuc.ans=pkr/kuc.kuc;
+	
+	struct crypto bnb;
+	bnb.ans=pkr/bnb.bnb;
+	
+	struct crypto lite;
+	lite.ans=pkr/lite.lite;
+
+
+switch (ch)
+
+{
+	case 'M':
+	cout<<"-----------------------------------------------------"<<endl;
+	cout<<"\nThe Total Matics According To Your PKR Will Be = "<<matic.ans<<endl;
+	break;
+	
+	case 'B':
+	cout<<"The Total BTC According To Your PKR Will Be = "<<btc.ans<<endl;
+	break;
+	
+	case 'E':
+	cout<<"The Total ETH According To Your PKR Will Be = "<<eth.ans<<endl;
+	break;
+	
+	case 'S':
+	cout<<"The Total Shibba According To Your PKR Will Be = "<<shibba.ans<<endl;
+	break;
+
+    case 'D':
+	cout<<"The Total Dogge According To Your PKR Will Be = "<<dogge.ans<<endl;
+	break; 
+	
+	case 'R':
+	cout<<"The Total Ripples According To Your PKR Will Be = "<<ripple.ans<<endl;
+	break;
+	
+	case 'T':
+	cout<<"The Total Trons According To Your PKR Will Be = "<<tron.ans<<endl;
+	break;
+	
+	case 'K':
+	cout<<"The Total KUC According To Your PKR Will Be = "<<kuc.ans<<endl;
+	break;
+	
+	case 'N':
+	cout<<"The Total BNB According To Your PKR Will Be = "<<bnb.ans<<endl;
+	break;
+	
+	case 'L':
+	cout<<"The Total Lite According To Your PKR Will Be = "<<lite.ans<<endl;
+	break;
+}
+
+
+	
+}
+
+
+void currency () // To Calculate The Curreny
 	
 {
-	
 	char ch;
 	float pkr;
 
@@ -27,7 +172,7 @@ void currency ()
 	cout<<"Enter The Chracter Of Currency In Which You Want To Convert Your PKR"<<endl;
 	cout<<"----------------------------------------------------------------------"<<endl;
 	
-    cout<<"\nAustrilian Dolalr = A \nCandian Dollar = C \nKuwait Dinar = K \nDollar = D \nDirham = U \nTakka = T \nINR = I \nLira = L \nEuro = E \nRiyal = R "<<endl;
+    cout<<"\n * Austrilian Dolalr = A \n * Candian Dollar = C \n * Kuwait Dinar = K \n * Dollar = D \n * Dirham = U \n * Takka = T \n * INR = I \n * Lira = L \n * Euro = E \n * Riyal = R "<<endl;
 	cout<<"----------------------------------------------------------------------"<<endl;
 	cin>>ch;
 
@@ -67,54 +212,54 @@ switch (ch)
 {
 case 'A':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Australian Dollar According To Your PKR Will Be = "<<aus.result<<endl;
+	cout<<"The Total Australian Dollar According To Your PKR "<<pkr<<" Will Be = "<<aus.result<<" Australian Dollars"<<endl;
 	break;
 		
 case 'C':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Candian Dollar According To Your PKR Will Be = "<<can.result<<endl;
+	cout<<"The Total Candian Dollar According To Your PKR "<<pkr<< " Will Be = "<<can.result<<" Canadian Dollars"<<endl;
 	break;
 
 case 'K':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Kuwaiti Dinar According To Your PKR Will Be = "<<kd.result<<endl;
+	cout<<"The Total Kuwaiti Dinar According To Your PKR "<<pkr<< " Will Be = "<<kd.result<<" Dinars"<<endl;
 	break;
 
 case 'D':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Dollars According To Your PKR Will Be = "<<dollar.result<<endl;
+	cout<<"The Total Dollars According To Your PKR " <<pkr<< " Will Be = "<<dollar.result<<" Dollars"<<endl;
 	break;
 	
 case 'U':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Dirhams According To Your PKR Will Be = "<<dirham.result<<endl;
+	cout<<"The Total Dirhams According To Your PKR " <<pkr<< " Will Be = "<<dirham.result<<" Dirhams"<<endl;
 	break;
 
 case 'T':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Takkas According To Your PKR Will Be = "<<takka.result<<endl;
+	cout<<"The Total Takkas According To Your PKR "<<pkr<< " Will Be = "<<takka.result<<" Takkas"<<endl;
 	break;
 	
 case 'I':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Inidna Ruppess According To Your PKR Will Be = "<<in.result<<endl;
+	cout<<"The Total Inidna Ruppess According To Your PKR "<<pkr<< " Will Be = "<<in.result<<" INR"<<endl;
 	break;
 	
 case 'L':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Liras According To Your PKR Will Be = "<<lira.result<<endl;
+	cout<<"The Total Liras According To Your PKR "<<pkr<<" Will Be = "<<lira.result<<" Lira"<<endl;
 	break;
 
 	
 case 'E':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Euros According To Your PKR Will Be = "<<euro.result<<endl;
+	cout<<"The Total Euros According To Your PKR " <<pkr<<" Will Be = "<<euro.result<<" Euro"<<endl;
 	break;
 	
 		
 case 'R':
 	cout<<"----------------------------------------------------------------------"<<endl;
-	cout<<"The Total Riyals According To Your PKR Will Be = "<<riyal.result<<endl;
+	cout<<"The Total Riyals According To Your PKR " <<pkr<<" Will Be = "<<riyal.result<<" Riyals"<<endl;
 	break;
 
 		
@@ -122,34 +267,73 @@ case 'R':
 
 }
 
-int main ()
+void menu ()
 {
+    
+  int chose=3;
+    
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<" \t Welcom To The Excahange Converter "<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<" Choose Your Desired Option To Continue"<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cout<<" * For Currency Converter Press = 1 \n * For Crypto Converter Press = 2 \n * For Gold Rates Press = 3 "<<endl;
+	cout<<"-----------------------------------------------"<<endl;
+	cin>>chose;
+	cout<<"-------------------------------------------"<<endl;
+
+
+
+switch (chose)
+{
+	case 1: 
 	currency();
-	int b;
+	break;
 	
-cout<<"Do You Want To Use Again Yes = 1: No = 2"<<endl;
-cin>>b;
-
+	case 2:
+	crypto();
+	break;
 	
-if (b==1)
+	case 3:
+	gold();
+	break;
+	
+}
 
-{
-	while (b!=2)
+int b;
+cout<<"-------------------------------------------"<<endl;
+	cout<<"Go To Main Menu Yes = 1 And No = 2"<<endl;
+	cin>>b;
+	cout<<"-------------------------------------------"<<endl;
+	
+	switch (b)
 	
 	{
-		currency();
-cout<<"----------------------------------------------------------------------"<<endl;
-cout<<"Do You Want To Use Again Yes = 1: No = 2"<<endl;
-cin>>b;
-cout<<"----------------------------------------------------------------------"<<endl;
+		case 1:
+		while (b!=2)
+	
+	{	
+menu();	
+break;
+	}
+
+cout<<"\nb*Press =1 To Go Back To Main Menu  \n*Press"<<endl;
+break;
+	
+	case 2:
+		cout<<"Thank You "<<endl;
+		break;
 		
-	}
-	
-	}
-	
-    cout<<"--------------------------------"<<endl;
-	cout<<"Thank You For Using "<<endl;		
-	exit(0);
-	return 0;
+		
 }
+
+exit(0);
+
+}
+
+
+int main ()
+{
 	
+	menu();
+}
