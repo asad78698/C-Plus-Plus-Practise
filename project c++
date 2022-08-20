@@ -321,7 +321,7 @@ cout<<"\nb*Press =1 To Go Back To Main Menu  \n*Press"<<endl;
 break;
 	
 	case 2:
-		cout<<"Thank You "<<endl;
+		cout<<"Thank You For Using Our Exchange!"<<endl;
 		break;
 		
 		
