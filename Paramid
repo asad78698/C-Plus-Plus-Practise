@@ -17,7 +17,7 @@ for (int i=1; i<=n; ++i)
 	
 	cout<<" ";
 	
-	for (int k=1; k<=2*i-1; ++k)
+	for (int k=1; k<=2*i-1; ++k) // yaha agar i ki jaga 1 ajai to new shape print hogi 
 	cout<<"*";
 	cout<<endl;
 	
