@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	
+	int test [4];
+	int t, find;
+	
+	cout<<"Enter Values "<<endl;
+	for(t=0;t<4; ++t)
+	{
+		
+	cin>>test[t];
+	}
+	
+	
+	cout<<"Enter Value To Find Index"<<endl;
+	
+	cin>>find;
+	
+	for(t=0;t<4; ++t){
+		
+		if(test[t]==find)
+	{
+        cout<<test[t]<<endl;
+        cout<<t<<endl;
+     
+		break;
+	}
+	
+
+	}
+
+	
+}
