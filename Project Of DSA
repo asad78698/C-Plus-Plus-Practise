@@ -1,0 +1,128 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+    
+  string name;
+  int number, phoneNumber;
+  
+  int schoolfee;
+  
+    int course =6;
+     int sum1, sum2, sum3,sum4;
+      int tax=2000;
+      int discount;
+      
+  
+  
+    
+  cout << " --------------------------------------------- " << endl;
+  cout << " Bacon House Billing System " << endl;
+  cout << " --------------------------------------------- " << endl;
+
+  cout << " --------------------------------------------- " << endl;
+  cout << " Student Information " << endl;
+  cout << " --------------------------------------------- " << endl;
+
+  cout << " Enter Name " << endl;
+  getline(cin, name);
+  
+  cout << " Enter Your Class " << endl;
+  cin>>number;
+  
+  cout << "Enter Your Phone Number " << endl;
+  cin>>phoneNumber;
+ 
+  if(number==6){
+      
+     course =5;
+      tax=2000;
+      
+      sum1=course*1000;
+      
+      sum2=sum1+tax;
+      
+      sum3 = sum2/10;
+      
+      sum4=sum1+sum2+sum3;
+      
+      
+      
+      
+      
+      
+      
+  }
+  
+  else if(number==7)
+  {
+     course=6;
+     tax=2000;
+  
+      sum1=course*1000;
+      
+      sum2=sum1+tax;
+      
+      sum3 = sum2/10;
+      
+      sum4=sum1+sum2+sum3;
+
+
+}
+
+else if (number==8)
+{
+  
+      course =7;
+      
+      tax=2000;
+      
+      sum1=course*1000;
+      
+      sum2=sum1+tax;
+      
+      sum3 = sum2/10;
+     
+      sum4=sum1+sum2+sum3;
+     
+}
+
+ cout << " --------------------------------------------- " << endl;
+  cout << " Chalan Information " << endl;
+  cout << " --------------------------------------------- " << endl;
+
+  cout<<"Serial Number: #568974589-5896";
+  cout<<" \t Issued Date: 08-06-2023 "<<endl;
+  
+   cout << " --------------------------------------------- " << endl;
+  
+  cout<<"Charges of Cources: ";
+  cout<<" \t "<<sum1;
+  
+  cout<<endl;
+  
+  cout<<"Charges After Tax: ";
+  cout<<" \t "<<sum2;
+  
+  cout<<endl;
+  
+  cout<<"Discount: ";
+  cout<<" \t \t "<<sum3<<endl;
+  cout << " ------------------------------------------------------ ";
+  
+  
+  
+  cout<<endl;
+  
+ cout<<"Your Total Amount Is: ";
+ cout<<"\t"<<sum4;
+
+
+}
+
+
+
+
+
