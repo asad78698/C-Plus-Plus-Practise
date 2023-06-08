@@ -1,128 +1,127 @@
 #include <iostream>
-#include <string>
+
 using namespace std;
 
-int main ()
+void GenerateVoice(int student[]){
+    
+    int search,courses, sum, idfound, tax;
+
+    
+    cout<<" Enter Your Student ID "<<endl;
+    cin>>search;
+    
+    for(int i=0; i<7; ++i){
+        
+        if(student[i]==search){
+            
+            cout<<"The Student is found "<<endl;
+            
+            idfound=student[i];
+        }
+    }
+    
+    
+    cout<<"Enter The Courses You Want To Enrolled ?"<<endl;
+    cin>>courses;
+    
+    sum = courses*1200;
+    
+    cout<<"---------------------------------------"<<endl;
+    
+    cout<<" Invoice Of Bacon House School "<<endl;
+    
+    cout<<"---------------------------------------"<<endl;
+    
+    cout<<" \t Your Student Id: "<<idfound<<" \t Issued Date: 12-6-2023 \n Total Courses = "<<courses<<" \n Tax = "<<tax<<endl;
+    
+
+    
+    
+    
+}
+
+void AddStudent(int student[]){
+    
+    int howmany;
+    
+    cout<<"---------------------------------------------------"<<endl;
+    
+    cout<<"How Many Student You Want To Add?"<<endl;
+    cin>>howmany;
+    
+    cout<<"Enter Student IDs"<<endl;
+    for(int i=0; i<howmany; ++i){
+        
+        cin>>student[i];
+    }
+    
+    cout<<"The Students Are Added Successfully "<<endl;
+    
+    
+}
+
+void viewStudent(int student[]){
+    
+    cout<<"The Students Currently Enrolled "<<endl;
+    
+    for(int i=0; i<7-1; ++i){
+        
+        for(int j=i+1; j<7; j++){
+            
+            int temp = student[i];
+            student[i]=student[j];
+            student[j]=temp;
+        }
+        
+       
+    }
+    
+    for(int i = 0; i<7; ++i){
+        
+         cout<<" "<<student[i];
+    }
+    
+        cout<<" \n ---------------------------------------------------"<<endl;
+
+}
+
+
+
+int main()
 {
-    
-  string name;
-  int number, phoneNumber;
-  
-  int schoolfee;
-  
-    int course =6;
-     int sum1, sum2, sum3,sum4;
-      int tax=2000;
-      int discount;
-      
-  
-  
-    
-  cout << " --------------------------------------------- " << endl;
-  cout << " Bacon House Billing System " << endl;
-  cout << " --------------------------------------------- " << endl;
-
-  cout << " --------------------------------------------- " << endl;
-  cout << " Student Information " << endl;
-  cout << " --------------------------------------------- " << endl;
-
-  cout << " Enter Name " << endl;
-  getline(cin, name);
-  
-  cout << " Enter Your Class " << endl;
-  cin>>number;
-  
-  cout << "Enter Your Phone Number " << endl;
-  cin>>phoneNumber;
+   int enter, choice;
+   
+   
+   int student[7]={11,12,15,16,18,19,25};
  
-  if(number==6){
-      
-     course =5;
-      tax=2000;
-      
-      sum1=course*1000;
-      
-      sum2=sum1+tax;
-      
-      sum3 = sum2/10;
-      
-      sum4=sum1+sum2+sum3;
-      
-      
-      
-      
-      
-      
-      
-  }
-  
-  else if(number==7)
-  {
-     course=6;
-     tax=2000;
-  
-      sum1=course*1000;
-      
-      sum2=sum1+tax;
-      
-      sum3 = sum2/10;
-      
-      sum4=sum1+sum2+sum3;
+   cout<<"------------------------------------------"<<endl;
+   cout<<" Press 1: For Menu And Press 2: For Exit "<<endl;
+   cin>>enter;
+   
+   while(enter != 7){
+       
+        cout<<" \n Press 1: Add Student \n Press 2: View All Student \n Press 3: Generate The Invoice \n Press 4: Delete The Student \n Press 5: Search The Student "<<endl;
+        cin>>choice;
+       
+       switch(choice){
+           
 
-
+           case 1: 
+           AddStudent(student);
+           break;
+           
+           case 2:
+           viewStudent(student);
+           break;
+           
+           case 3:
+           GenerateVoice(student);
+           break;
+          
+  
+           
+       }
+   }
+   
+  
 }
-
-else if (number==8)
-{
-  
-      course =7;
-      
-      tax=2000;
-      
-      sum1=course*1000;
-      
-      sum2=sum1+tax;
-      
-      sum3 = sum2/10;
-     
-      sum4=sum1+sum2+sum3;
-     
-}
-
- cout << " --------------------------------------------- " << endl;
-  cout << " Chalan Information " << endl;
-  cout << " --------------------------------------------- " << endl;
-
-  cout<<"Serial Number: #568974589-5896";
-  cout<<" \t Issued Date: 08-06-2023 "<<endl;
-  
-   cout << " --------------------------------------------- " << endl;
-  
-  cout<<"Charges of Cources: ";
-  cout<<" \t "<<sum1;
-  
-  cout<<endl;
-  
-  cout<<"Charges After Tax: ";
-  cout<<" \t "<<sum2;
-  
-  cout<<endl;
-  
-  cout<<"Discount: ";
-  cout<<" \t \t "<<sum3<<endl;
-  cout << " ------------------------------------------------------ ";
-  
-  
-  
-  cout<<endl;
-  
- cout<<"Your Total Amount Is: ";
- cout<<"\t"<<sum4;
-
-
-}
-
-
-
-
-
