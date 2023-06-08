@@ -1,63 +1,42 @@
+
 #include <iostream>
 
 using namespace std;
 
-void GenerateVoice(int student[]){
+void SearchForStudent(int student[]){
     
-    int search,courses, sum, idfound, tax;
-
+    int searchStudent, start=0, end=7, size = 7;
     
-    cout<<" Enter Your Student ID "<<endl;
-    cin>>search;
+    cout<<"Enter The Id Of Student You Want To Search "<<endl;
+    cin>>searchStudent;
     
-    for(int i=0; i<7; ++i){
+    while(start<=end){
         
-        if(student[i]==search){
+        int mid = (start+end)/2;
+        
+        if(searchStudent==size){
             
-            cout<<"The Student is found "<<endl;
+            cout<<"The Student Is Not Found "<<endl;
             
-            idfound=student[i];
         }
-    }
-    
-    
-    cout<<"Enter The Courses You Want To Enrolled ?"<<endl;
-    cin>>courses;
-    
-    sum = courses*1200;
-    
-    cout<<"---------------------------------------"<<endl;
-    
-    cout<<" Invoice Of Bacon House School "<<endl;
-    
-    cout<<"---------------------------------------"<<endl;
-    
-    cout<<" \t Your Student Id: "<<idfound<<" \t Issued Date: 12-6-2023 \n Total Courses = "<<courses<<" \n Tax = "<<tax<<endl;
-    
-
-    
-    
-    
-}
-
-void AddStudent(int student[]){
-    
-    int howmany;
-    
-    cout<<"---------------------------------------------------"<<endl;
-    
-    cout<<"How Many Student You Want To Add?"<<endl;
-    cin>>howmany;
-    
-    cout<<"Enter Student IDs"<<endl;
-    for(int i=0; i<howmany; ++i){
         
-        cin>>student[i];
+        else if(mid==searchStudent){
+            
+            cout<<"The Student Is Found: "<<searchStudent<<endl;
+        }
+        
+        else if(searchStudent<student[mid]){
+            
+            end = mid-1;
+            
+        }
+        
+        else{
+            
+            start = mid+1;
+        }
+        
     }
-    
-    cout<<"The Students Are Added Successfully "<<endl;
-    
-    
 }
 
 void viewStudent(int student[]){
@@ -83,6 +62,113 @@ void viewStudent(int student[]){
     
         cout<<" \n ---------------------------------------------------"<<endl;
 
+}
+
+void DeleteStudent(int student[]){
+    int searchfordel;
+    
+    cout<<"Enter Id Of The Student You Want To Delete "<<endl;
+    cin>>searchfordel;
+    
+    for(int i=0; i<7; ++i){
+        
+        if(student[i]==searchfordel){
+            
+            student[i] = 0;
+            
+        }
+    }
+    
+    for(int i=0; i<7; ++i){
+        
+        if(student[i]==0){
+            
+            continue;
+        }
+    }
+    
+    cout<<"The Student Id Has Been Deleted "<<endl;
+    
+}
+
+void GenerateVoice(int student[]){
+    
+    int search,courses, sum, idfound, tax,libfee, Studentfund, discount, total;
+
+    
+    cout<<" Enter Your Student ID "<<endl;
+    cin>>search;
+    
+    for(int i=0; i<7; ++i){
+        
+        if(student[i]==search){
+            
+            cout<<"The Student is found "<<endl;
+            
+            idfound=student[i];
+        }
+    }
+    
+    
+    cout<<"Enter The Courses You Want To Enrolled ?"<<endl;
+    cin>>courses;
+    
+    sum = courses*1200;
+        
+    libfee = 1000;
+    
+    Studentfund = 500;
+    
+    total = sum+libfee+Studentfund;
+
+    tax = (15%total)*100;
+    
+    if(total>10000)
+    {
+        total = tax+total;
+    }
+    
+    if(total>15000){
+        
+        discount = (20%total)*100;
+        
+        total = total-discount;
+    }
+
+
+    
+    cout<<"---------------------------------------"<<endl;
+    
+    cout<<" \t Invoice Of Bacon House School "<<endl;
+    
+    cout<<"---------------------------------------"<<endl;
+    
+    cout<<" Your Student Id: "<<idfound<<" \t\t Issued Date: 12-6-2023 \n\n Total Courses = "<<courses<<" \n Tax = "<<tax<<" \n Library Fee: "<<libfee<<" \n Student Fund: "<<Studentfund<<" \n Discount: "<<discount<<" \n Total: "<<total<<endl;
+    
+
+    
+    
+    
+}
+
+void AddStudent(int student[]){
+    
+    int howmany;
+    
+    cout<<"---------------------------------------------------"<<endl;
+    
+    cout<<"How Many Student You Want To Add?"<<endl;
+    cin>>howmany;
+    
+    cout<<"Enter Student IDs"<<endl;
+    for(int i=0; i<howmany; ++i){
+        
+        cin>>student[i];
+    }
+    
+    cout<<"The Students Are Added Successfully "<<endl;
+    
+    
 }
 
 
@@ -117,9 +203,14 @@ int main()
            case 3:
            GenerateVoice(student);
            break;
-          
-  
            
+           case 4:
+           DeleteStudent(student);
+           break;
+           
+           case 5:
+           SearchForStudent(student);
+           break;
        }
    }
    
